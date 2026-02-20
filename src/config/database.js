@@ -1,0 +1,11 @@
+//  connect backend to database
+const mongoose = require('mongoose')
+
+function connectToDb(){
+    mongoose.connect(process.env.MONGO_URI)
+    .then(()=>{
+        console.log('Connected To Database')
+    })
+}
+
+module.exports = connectToDb
